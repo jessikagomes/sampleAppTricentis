@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.openqa.selenium.By;
 
@@ -39,7 +40,8 @@ public class ValidadorCpfSteps{
 
 	@Entao("devo ver o resultado {string} na busca")
 	public void devo_ver_o_resultado_na_busca(String string) {
-	//	WebElement input = browser.findElement(By.id("busca"));
+		WebElement input = browser.findElement(By.id("busca"));
+		assertNotNull(input);
 		browser.quit();
 	}
 
