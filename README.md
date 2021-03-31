@@ -138,15 +138,6 @@ Java Extension Pack | Cucumber (Gherkin) | Cuke Step Definition Generator | Lang
 
 #### :bulb: Estrutura Arquivo
 
-  driver 
-
-      |-- chromedriver
-
-  mvnw
-
-  mvnw.cmd
-
-  pom.xml
 
   src
 
@@ -207,10 +198,6 @@ Java Extension Pack | Cucumber (Gherkin) | Cuke Step Definition Generator | Lang
     |  |  |  |  |  |  |-- SendQuoteSteps.java
 
     |  |  |  |  |  |  |-- VehicleSteps.java
-
-  test.bat -- Arquivo para rodar teste no Windows
-
-  test.sh -- Arquivo para rodar teste no Unix
 
 ------
 
