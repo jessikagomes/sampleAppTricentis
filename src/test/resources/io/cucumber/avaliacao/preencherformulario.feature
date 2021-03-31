@@ -52,3 +52,21 @@ Funcionalidade: Preencher o formulario no site SampleApp Tricentis
     E seleciono opcionais Optional Products 
     E seleciono uma cortesia Courtesy Car
     Entao clico em next para ver a tabela de precos
+  
+  Cenario: Escolher tipo de Select Price Option
+    Quando escolhe uma opcao 
+    Entao clico em Next para receber orcamento
+
+  Esquema do Cenario: Preencher os campos Send Quote
+    E preencho o email "<E-Mail>"
+    E digito um telefone "<Phone>"
+    E escolho um nome de usuario "<Username>"
+    E escolho uma senha "<Password>"
+    E confirmo a senha Confirm "<ConfirmPassword>"
+    Quando clico em Send
+    Entao Verifico a mensagem "Sending e-mail success!"
+    E clico no botao Ok
+ 
+    Exemplos:
+      |E-Mail                       |Phone    |Username    |Password|ConfirmPassword|
+      |Leandro@stilomovelaria.com.br|123456789|leandrocstil|ZWLap90n|ZWLap90n       |
