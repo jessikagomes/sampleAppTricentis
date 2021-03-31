@@ -53,25 +53,39 @@ Entao clico next para Insurant
 Exemplos:
 
    |Cylinder|Engine   |Payload  |Weight   |Price|License |Mileage|
+   
    |100     |100      |1000     |200      |500  |HWH3623 |500    |
 
 ##### Esquema do Cenario: Preencher Enter Insurant Data
 
 E digito First "<*First*>" Name
+
 E digito Last "<*Last*>" Name
+
 E escolho Date of Birth "<*Nascimento*>"
+
 E escolho Gender
+
 E digito Street "<*Address*>"
+
 E escolho Country
+
 E digito "<*Zip*>" Code
+
 E digito cidade "<*City*>"
+
 E escolho Occupation
+
 E escolho Hobbies
+
 E digito website "<*Website*>"
+
 Entao clico next para Product
 
 Exemplos:
+
    |First  |Last   |Nascimento |Address                  |Zip     |City   |Website             |
+
    |Leandro|Cardoso|03/08/1964 |Rua Alcina da Silva Braga|09360680|Maua   |https://cucumber.io/|
 
 ##### Cenario: Preencher Enter Product Data
