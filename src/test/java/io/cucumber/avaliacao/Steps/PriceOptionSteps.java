@@ -9,7 +9,7 @@ import io.cucumber.java.pt.*;
 
 public class PriceOptionSteps extends Configuracao{
     
-    @Quando("escolhe uma opcao")
+    @Quando("escolho uma opcao")
     public void escolhe_uma_opcao() {
         WebElement element = PriceOptionPage.opcaoSeguro(browser);
 		Actions actions = new Actions(browser);

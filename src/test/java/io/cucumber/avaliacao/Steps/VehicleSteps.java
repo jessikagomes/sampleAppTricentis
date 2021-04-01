@@ -9,86 +9,38 @@ import io.cucumber.java.pt.*;
 public class VehicleSteps extends Configuracao{
 
 	@Quando("estou no site SampleApp Tricentis")
-	public void estou_no_site_SampleApp_Tricentis() {
+	public void estou_no_site_sampleApp_tricentis() {
 		Configuracao.open("http://sampleapp.tricentis.com/101/app.php");
 	}
 
-	@Quando("seleciono uma opcao Make")
-	public void seleciono_uma_opcao_Make() {
+	@Quando("seleciono as opcoes da aba Enter Vehicle Data")
+	public void seleciono_as_opcoes_da_aba_enter_vehicle_data() throws InterruptedException {
 		VehiclePage.dropdownMake(browser).click();
-	}
-
-	@Quando("seleciono o Model")
-	public void seleciono_o_Model() {
 		VehiclePage.dropdownModel(browser).click();
-	}
-
-	@Quando("digito o {} Capacity")
-	public void digito_o_Capacity(String string) {
-		VehiclePage.campoCylender(browser).sendKeys(string);
-	}	
-
-	@Quando("digito no campo {} Performance")
-	public void digito_no_campo_Engine_Performance(String string) {
-		VehiclePage.campoEngine(browser).sendKeys(string);
-	}	
-
-	@Quando("seleciono Date of Manufacture")
-	public void seleciono_Date_of_Manufacture() throws InterruptedException {
 		VehiclePage.botaoCalendario(browser).click();
 		Thread.sleep(2000);
 		VehiclePage.dataCalendario(browser).click();
-	}
-	
-	@Quando("seleciono Number of Seats")
-	public void seleciono_Number_of_Seats() {
 		VehiclePage.opcoesSeats(browser).click();
-	}
-
-	@Quando("seleciono Right Hand Drive")
-	public void seleciono_Right_Hand_Drive() throws InterruptedException {
 		WebElement element = VehiclePage.rightHandDrive(browser);
 		Actions actions = new Actions(browser);
 		actions.moveToElement(element).click().perform();
-	}	
-
-	@Quando("seleciono Number of Seats motorcycle")
-	public void seleciono_Number_of_Seats_motorcycle() {
 		VehiclePage.opcoesSeatsMotorcycle(browser).click();
-	}
-
-	@Quando("seleciono Fuel Type")
-	public void seleciono_Fuel_Type() {
 		VehiclePage.opcoesFuel(browser).click();
 	}
 
-	@Quando("digito campo {} [kg]")
-	public void digito_campo_kg(String string) {
-		VehiclePage.campoPayload(browser).sendKeys(string);
-	}
-	
-	@Quando("digito Total {} [kg]")
-	public void digito_Total_kg(String string) {
-		VehiclePage.campoWeight(browser).sendKeys(string);
-	}	
-		
-	@Quando("digito List {}")
-	public void digito_List(String string) {
-		VehiclePage.campoPrice(browser).sendKeys(string);
+	@Quando("preencho os campos da aba Enter Vehicle Data:{},{},{},{},{},{} e {}")
+	public void preencho_os_campos_da_aba_enter_vehicle_data(String cyl, String eng, String pay, String wei, String pri, String lic, String mil) {
+		VehiclePage.campoCylender(browser).sendKeys(cyl);
+		VehiclePage.campoEngine(browser).sendKeys(eng);
+		VehiclePage.campoPayload(browser).sendKeys(pay);
+		VehiclePage.campoWeight(browser).sendKeys(wei);
+		VehiclePage.campoPrice(browser).sendKeys(pri);
+		VehiclePage.campoLicense(browser).sendKeys(lic);
+		VehiclePage.campoMileage(browser).sendKeys(mil);
 	}
 
-	@Quando("digito {} Plate Number")
-	public void digito_Plate_Number(String string) {
-		VehiclePage.campoLicense(browser).sendKeys(string);
-	}
-
-	@Quando("digito Annual {}")
-	public void digito_Annual(String string) {
-		VehiclePage.campoMileage(browser).sendKeys(string);
-	}
-
-	@Entao("clico next para Insurant")
-	public void clico_next_para_insurant() {
+	@Entao("clico next para ir para a aba Insurant")
+	public void clico_next_para_ir_para_a_aba_insurant() {
 		VehiclePage.botaoNext(browser).click();
 	}
 
